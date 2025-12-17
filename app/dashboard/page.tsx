@@ -23,7 +23,7 @@ export default async function DashboardPage() {
           <h1 className="text-xl font-bold text-gray-800">Employee Portal</h1>
           <div className="flex items-center gap-4">
             <span className="text-sm text-gray-600">
-              Halo, <strong>{user.email}</strong>
+              Welcome, <strong>{user.email}</strong>
             </span>
             <form action={logout}>
               <button 
