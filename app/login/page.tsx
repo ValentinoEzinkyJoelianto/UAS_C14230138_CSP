@@ -19,10 +19,7 @@ export default function LoginPage() {
   }
 
   return (
-    // 1. Container Utama: Full screen, background abu-abu, flex center
     <div className="flex min-h-screen w-full items-center justify-center bg-gray-100 p-4">
-      
-      {/* 2. Kartu Form: Putih, rounded, shadow, max-width */}
       <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
         
         <div className="mb-8 text-center">
