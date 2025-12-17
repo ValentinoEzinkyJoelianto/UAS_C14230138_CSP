@@ -3,12 +3,12 @@
 import { signup } from '@/app/auth/actions'
 import { useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation' // 1. Import useRouter
+import { useRouter } from 'next/navigation'
 
 export default function RegisterPage() {
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
-  const router = useRouter() // 2. Inisialisasi router
+  const router = useRouter()
 
   async function handleSubmit(formData: FormData) {
     setLoading(true)
@@ -16,12 +16,10 @@ export default function RegisterPage() {
     
     const result = await signup(formData)
 
-    // 3. Cek hasil: Jika ada error tampilkan, jika tidak, redirect ke login
     if (result?.error) {
         setError(result.error)
         setLoading(false)
     } else {
-        // Redirect ke halaman login dengan pesan sukses di URL query
         router.push('/login?message=Registrasi berhasil, silakan login.')
     }
   }
