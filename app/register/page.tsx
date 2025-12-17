@@ -41,9 +41,11 @@ export default function RegisterPage() {
         )}
 
         <form className="mt-8 space-y-6" action={handleSubmit}>
-          <div className="-space-y-px rounded-md shadow-sm">
-            <div>
-              <label htmlFor="email" className="sr-only">Email address</label>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+              Email Address
+            </label>
+            <div className="mt-2">
               <input
                 id="email"
                 name="email"
@@ -53,8 +55,13 @@ export default function RegisterPage() {
                 placeholder="Email Address"
               />
             </div>
-            <div>
-              <label htmlFor="password" className="sr-only">Password</label>
+          </div>
+
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
+              Password
+            </label>
+            <div className="mt-2">
               <input
                 id="password"
                 name="password"
@@ -65,7 +72,7 @@ export default function RegisterPage() {
               />
             </div>
           </div>
-
+          
           <div>
             <button
               type="submit"
